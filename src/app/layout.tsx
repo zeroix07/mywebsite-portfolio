@@ -22,13 +22,13 @@ export const metadata: Metadata = {
   icons: {
     icon: "/profile.jpg",
   },
-  // openGraph: {
-  //   title: "Z.ai Code Scaffold",
-  //   description: "AI-powered development with modern React stack",
-  //   url: "https://chat.z.ai",
-  //   siteName: "Z.ai",
-  //   type: "website",
-  // },
+  openGraph: {
+    title: "Fadhel Muhammad Apriansyah Portfolio",
+    description: "Analytics & AI Engineer Portfolio",
+    url: "",
+    siteName: "Fadhel Muhammad Apriansyah Portfolio",
+    type: "website",
+  },
   twitter: {
     card: "summary_large_image",
     title: "Fadhel Muhammad Apriansyah",

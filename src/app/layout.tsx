@@ -15,24 +15,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Fadhel Muhammad Apriansyah Portfolio",
+  description: "Analytics & AI Engineer",
+  keywords: ["Analytics", "AI", "Engineer", "Data Science", "Machine Learning", "Data Analysis", "Data Visualization", "Data Engineering", "Data Architecture", "Data Management", "Data Security", "Data Privacy", "Data Governance", "Data Compliance", "Data Quality", "Data Integrity", "Data Accuracy", "Data Reliability"],
+  authors: [{ name: "Fadhel Muhammad Apriansyah" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/profile.jpg",
   },
-  openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
-    type: "website",
-  },
+  // openGraph: {
+  //   title: "Z.ai Code Scaffold",
+  //   description: "AI-powered development with modern React stack",
+  //   url: "https://chat.z.ai",
+  //   siteName: "Z.ai",
+  //   type: "website",
+  // },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Fadhel Muhammad Apriansyah",
+    description: "Analytics & AI Engineer",
   },
 };
 

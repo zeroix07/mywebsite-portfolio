@@ -1179,7 +1179,7 @@ export default function Home() {
             >
               <h3 className="text-foreground dark:text-white font-semibold mb-4">Expertise</h3>
               <ul className="space-y-2">
-                {['Data Analytics', 'Business Intelligence', 'Machine Learning', 'Cloud Computing', 'AI Engineering'].map((skill) => (
+                {['Data Analytics', 'Data Science', 'Data Engineering', 'Business Intelligence', 'Machine Learning', 'Cloud Computing', 'AI Engineering'].map((skill) => (
                   <li key={skill} className="text-muted-foreground dark:text-white text-sm">
                     {skill}
                   </li>

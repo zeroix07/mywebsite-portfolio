@@ -390,14 +390,14 @@ export default function Home() {
             >
               {/* First set of tools */}
               {[
-                { name: "Python", color: "from-blue-400 to-blue-600" },
-                { name: "TensorFlow", color: "from-orange-400 to-orange-600" },
-                { name: "PyTorch", color: "from-red-400 to-red-600" },
-                { name: "Scikit-learn", color: "from-yellow-400 to-yellow-600" },
-                { name: "Pandas", color: "from-purple-400 to-purple-600" },
-                { name: "NumPy", color: "from-green-400 to-green-600" },
-                { name: "Keras", color: "from-pink-400 to-pink-600" },
-                { name: "Jupyter", color: "from-cyan-400 to-cyan-600" }
+                { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+                { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+                { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+                { name: "Scikit-learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
+                { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+                { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+                { name: "Keras", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" },
+                { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" }
               ].map((tool, index) => (
                 <motion.div
                   key={`row1-${index}`}
@@ -407,8 +407,8 @@ export default function Home() {
                 >
                   <Card className="bg-card/50 border-border/30 hover:border-primary/50 dark:bg-black/50 dark:border-green-900/30 dark:hover:border-green-500/50 transition-all duration-300 h-full shadow-lg">
                     <CardContent className="p-6 text-center">
-                      <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${tool.color} flex items-center justify-center`}>
-                        <span className="text-white font-bold text-lg">{tool.name.charAt(0)}</span>
+                      <div className="w-16 h-16 mx-auto mb-4 bg-background dark:bg-black/50 rounded-lg flex items-center justify-center p-2">
+                        <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain filter dark:brightness-0 dark:invert dark:opacity-90" />
                       </div>
                       <h3 className="text-foreground dark:text-green-300 font-semibold">{tool.name}</h3>
                     </CardContent>
@@ -417,14 +417,14 @@ export default function Home() {
               ))}
               {/* Duplicate set for seamless loop */}
               {[
-                { name: "Python", color: "from-blue-400 to-blue-600" },
-                { name: "TensorFlow", color: "from-orange-400 to-orange-600" },
-                { name: "PyTorch", color: "from-red-400 to-red-600" },
-                { name: "Scikit-learn", color: "from-yellow-400 to-yellow-600" },
-                { name: "Pandas", color: "from-purple-400 to-purple-600" },
-                { name: "NumPy", color: "from-green-400 to-green-600" },
-                { name: "Keras", color: "from-pink-400 to-pink-600" },
-                { name: "Jupyter", color: "from-cyan-400 to-cyan-600" }
+                { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+                { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+                { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+                { name: "Scikit-learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
+                { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+                { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+                { name: "Keras", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" },
+                { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" }
               ].map((tool, index) => (
                 <motion.div
                   key={`row1-duplicate-${index}`}
@@ -434,8 +434,8 @@ export default function Home() {
                 >
                   <Card className="bg-card/50 border-border/30 hover:border-primary/50 dark:bg-black/50 dark:border-green-900/30 dark:hover:border-green-500/50 transition-all duration-300 h-full shadow-lg">
                     <CardContent className="p-6 text-center">
-                      <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${tool.color} flex items-center justify-center`}>
-                        <span className="text-white font-bold text-lg">{tool.name.charAt(0)}</span>
+                      <div className="w-16 h-16 mx-auto mb-4 bg-background dark:bg-black/50 rounded-lg flex items-center justify-center p-2">
+                        <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain filter dark:brightness-0 dark:invert dark:opacity-90" />
                       </div>
                       <h3 className="text-foreground dark:text-green-300 font-semibold">{tool.name}</h3>
                     </CardContent>
@@ -460,14 +460,14 @@ export default function Home() {
             >
               {/* First set of tools */}
               {[
-                { name: "React", color: "from-cyan-400 to-cyan-600" },
-                { name: "Node.js", color: "from-green-400 to-green-600" },
-                { name: "Docker", color: "from-blue-400 to-blue-600" },
-                { name: "AWS", color: "from-yellow-400 to-yellow-600" },
-                { name: "MongoDB", color: "from-green-500 to-green-700" },
-                { name: "PostgreSQL", color: "from-blue-500 to-blue-700" },
-                { name: "Redis", color: "from-red-500 to-red-700" },
-                { name: "Kubernetes", color: "from-purple-400 to-purple-600" }
+                { name: "Apache Airflow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-plain.svg" },
+                { name: "dbt", icon: "https://www.getdbt.com/ui/img/favicons/apple-touch-icon.png" },
+                { name: "Apache Spark", icon: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" },
+                { name: "Snowflake", icon: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Snowflake_Logo.svg/1200px-Snowflake_Logo.svg.png" },
+                { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+                { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+                { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+                { name: "Apache Kafka", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" }
               ].map((tool, index) => (
                 <motion.div
                   key={`row2-${index}`}
@@ -477,8 +477,8 @@ export default function Home() {
                 >
                   <Card className="bg-card/50 border-border/30 hover:border-primary/50 dark:bg-black/50 dark:border-green-900/30 dark:hover:border-green-500/50 transition-all duration-300 h-full shadow-lg">
                     <CardContent className="p-6 text-center">
-                      <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${tool.color} flex items-center justify-center`}>
-                        <span className="text-white font-bold text-lg">{tool.name.charAt(0)}</span>
+                      <div className="w-16 h-16 mx-auto mb-4 bg-background dark:bg-black/50 rounded-lg flex items-center justify-center p-2">
+                        <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain filter dark:brightness-0 dark:invert dark:opacity-90" />
                       </div>
                       <h3 className="text-foreground dark:text-green-300 font-semibold">{tool.name}</h3>
                     </CardContent>
@@ -487,14 +487,14 @@ export default function Home() {
               ))}
               {/* Duplicate set for seamless loop */}
               {[
-                { name: "React", color: "from-cyan-400 to-cyan-600" },
-                { name: "Node.js", color: "from-green-400 to-green-600" },
-                { name: "Docker", color: "from-blue-400 to-blue-600" },
-                { name: "AWS", color: "from-yellow-400 to-yellow-600" },
-                { name: "MongoDB", color: "from-green-500 to-green-700" },
-                { name: "PostgreSQL", color: "from-blue-500 to-blue-700" },
-                { name: "Redis", color: "from-red-500 to-red-700" },
-                { name: "Kubernetes", color: "from-purple-400 to-purple-600" }
+                { name: "Apache Airflow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-plain.svg" },
+                { name: "dbt", icon: "https://www.getdbt.com/ui/img/favicons/apple-touch-icon.png" },
+                { name: "Apache Spark", icon: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" },
+                { name: "Snowflake", icon: "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Snowflake_Logo.svg/1200px-Snowflake_Logo.svg.png" },
+                { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+                { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+                { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+                { name: "Apache Kafka", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" }
               ].map((tool, index) => (
                 <motion.div
                   key={`row2-duplicate-${index}`}
@@ -504,8 +504,8 @@ export default function Home() {
                 >
                   <Card className="bg-card/50 border-border/30 hover:border-primary/50 dark:bg-black/50 dark:border-green-900/30 dark:hover:border-green-500/50 transition-all duration-300 h-full shadow-lg">
                     <CardContent className="p-6 text-center">
-                      <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${tool.color} flex items-center justify-center`}>
-                        <span className="text-white font-bold text-lg">{tool.name.charAt(0)}</span>
+                      <div className="w-16 h-16 mx-auto mb-4 bg-background dark:bg-black/50 rounded-lg flex items-center justify-center p-2">
+                        <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain filter dark:brightness-0 dark:invert dark:opacity-90" />
                       </div>
                       <h3 className="text-foreground dark:text-green-300 font-semibold">{tool.name}</h3>
                     </CardContent>
@@ -525,8 +525,8 @@ export default function Home() {
           >
             {[
               "Git", "SQL", "NoSQL", "REST API", "GraphQL", 
-              "CI/CD", "Linux", "Bash", "Tableau", "Power BI", 
-              "Excel", "Spark", "Hadoop", "FastAPI", "Django"
+              "CI/CD", "Linux", "Bash", "Tableau", "Power BI", "Spark", "Hadoop", "FastAPI", "Redis", 
+              "Selenium", "Polars", "MLflow", "BigQuery", "Typesense", "Google Cloud Platform"
             ].map((tool, index) => (
               <motion.div
                 key={index}
@@ -651,22 +651,117 @@ export default function Home() {
           <div className="space-y-8">
             {[
               {
-                title: "Senior AI Engineer",
-                company: "TechCorp Analytics",
-                period: "2022 - Present",
-                description: "Leading AI initiatives and developing machine learning models for predictive analytics and automation."
+                title: "Co-Founder & AI/ML Engineer",
+                company: "Tride Agency",
+                period: "Jan 2025 - Present",
+                type: "Self Employed",
+                description: [
+                  "Researched and evaluated machine learning algorithms and AI architectures to identify optimal models to solve various business problems.",
+                  "Designed, implemented, and deployed machine learning pipelines and AI models for classification, forecasting, and business insight generation.",
+                  "Collaborated with cross-functional teams to integrate AI/ML systems into production environments, ensuring reliability and scalability.",
+                  "Provided consultation and mentorship in AI and Machine Learning for internal teams and external clients, supporting model development, deployment, and strategic data utilization."
+                ]
+              },
+              {
+                title: "Data Scientist Facilitator",
+                company: "Indosat Ooredoo Hutchison Digital Camp (IDCamp)",
+                period: "Jan 2025 – Jun 2025",
+                type: "Freelance",
+                description: [
+                  "Mentored 25-30 students at Intermediate and Expert Class, with a high graduation rate through structured learning and hands-on projects.",
+                  "Led interactive sessions, enhancing participants' proficiency in AI, machine learning, and data analytics.",
+                  "Designed structured learning pathways to achieve project completion rate with high-quality deliverables.",
+                  "Provided expert guidance on capstone projects, to develop industry-standard solutions.",
+                  "Evaluated student progress through rigorous assessments, improving problem-solving and analytical skills.",
+                  "Applied industry expertise to bridge the gap between academic concepts and real-world data science challenges."
+                ]
+              },
+              {
+                title: "Data Analyst",
+                company: "dRetail.id",
+                period: "Oct 2024 – Present",
+                type: "Full Time",
+                description: [
+                  "Built, scheduled, and monitored workflows seamlessly using Apache Airflow, ensuring consistent and efficient data operations.",
+                  "Designed and implemented robust ETL processes, optimized data flow and improved data accessibility and handling.",
+                  "Architected complex data pipelines, successfully integrating diverse data sources to deliver high-quality, actionable insights.",
+                  "Analyzed data to uncover trends, patterns, and insights, directly contributing to data-driven decision-making.",
+                  "Processed and managed large-scale Big Data with precision, ensuring high-quality and reliable outputs.",
+                  "Developed and automated daily, weekly, and monthly reporting, streamlining business intelligence processes.",
+                  "Implemented Tableau dashboard visualizations to enhance strategic decision-making and monitor key business metrics."
+                ]
+              },
+              {
+                title: "Company Capstone Advisor at Bizzagi",
+                company: "BANGKIT ACADEMY – Led by Google, GoTo, Traveloka",
+                period: "Nov 2024 - Dec 2024",
+                type: "Part Time",
+                description: [
+                  "Guided and supported students in developing an LLM for SEO Audit, achieving a 94% success rate in project completion.",
+                  "Optimized students’ problem-solving abilities by introducing advanced prompt engineering techniques to improve SEO insight scores and generate actionable recommendations for SEO score enhancement.",
+                  "Mentored students in applying AI-driven models to analyze SEO data, leading to the identification of key optimization opportunities.",
+                  "Developed a structured approach for evaluating SEO performance, helping students pinpoint factors affecting SEO scores and implement effective improvements."
+                ]
+              },
+              {
+                title: "Company Capstone Advisor at Bizzagi",
+                company: "BANGKIT ACADEMY – Led by Google, GoTo, Traveloka",
+                period: "Apr 2024 - Jun 2024",
+                type: "Part Time",
+                description: [
+                  "Guided and supported students during their final capstone project Aspect Based Sentiment Analysis, achieving a 93% success rate.",
+                  "Facilitated hands-on learning in machine learning and AI, boosting student readiness for industry challenges by applying real-world case studies."
+                ]
               },
               {
                 title: "Data Scientist",
-                company: "DataDrive Solutions",
-                period: "2020 - 2022",
-                description: "Built data pipelines and statistical models to optimize business operations and customer insights."
+                company: "Braincore.id",
+                period: "May 2024 – July 2024",
+                type: "Part Time",
+                description: [
+                  "Guided and supported students during their final capstone project Aspect Based Sentiment Analysis, achieving a 93% success rate.",
+                  "Facilitated hands-on learning in machine learning and AI, boosting student readiness for industry challenges by applying real-world case studies."
+                ]
               },
               {
-                title: "Analytics Engineer",
-                company: "StartupX",
-                period: "2018 - 2020",
-                description: "Developed analytics infrastructure and dashboards for real-time business intelligence."
+                title: "Lead Curriculum Developer",
+                company: "Braincore.id",
+                period: "Jan 2024 – May 2024",
+                type: "Part Time",
+                description: [
+                  "Mentoring about AI/ML/Data Science/Analysis/Business Intelligence, improving student learning outcomes by 50%.",
+                  "Created and assessed educational materials and programs, resulting in a 50% increase in student engagement and satisfaction."
+                ]
+              },
+              {
+                title: "Data Analyst",
+                company: "Central Bureau of Statistics (Badan Pusat Statistik)",
+                period: "Jul 2023 – Sep 2023",
+                type: "Internship",
+                description: [
+                  "Preprocessed visitor data using Python, providing actionable insights that increased visitor experience by 20%.",
+                  "Developed interactive dashboards with Tableau, supporting better decision-making and resource allocation."
+                ]
+              },
+              {
+                title: "Internship Coordinator",
+                company: "Ministry of Communication and Informatics (Dinas Komunikasi dan Informatika)",
+                period: "Dec 2022 – Mar 2023",
+                type: "Internship",
+                description: [
+                  "Coordinated intern schedules and project timelines using Google Sheets, enhancing project efficiency and intern satisfaction by 15%.",
+                  "Documented project details and generated regular reports, contributing to a more effective and streamlined internship program."
+                ]
+              },
+              {
+                title: "Internship Coordinator",
+                company: "PT. KIMIA FARMA, TBK",
+                period: "May 2022 – Jun 2022",
+                type: "Internship",
+                description: [
+                  "Preprocessed sales data using Python.",
+                  "Developed a sales dashboard with Looker Studio that accelerated sales reporting accuracy by 20%."
+                ]
               }
             ].map((exp, index) => (
               <motion.div
@@ -686,10 +781,28 @@ export default function Home() {
                   className="bg-card/50 border border-border/30 dark:bg-black/50 dark:border-green-900/30 rounded-lg p-6 hover:border-primary/50 dark:hover:border-green-500/50 transition-all duration-300 shadow-lg"
                   whileHover={{ scale: 1.02 }}
                 >
-                  <h3 className="text-xl font-bold text-foreground dark:text-green-300 mb-1">{exp.title}</h3>
+                  <div className="flex items-center gap-3 mb-1 flex-wrap">
+                    <h3 className="text-xl font-bold text-foreground dark:text-green-300">{exp.title}</h3>
+                    {exp.type && (
+                      <span className="px-3 py-1 bg-primary/10 dark:bg-green-500/20 text-primary dark:text-green-400 text-xs font-semibold rounded-full border border-primary/20 dark:border-green-500/30">
+                        {exp.type}
+                      </span>
+                    )}
+                  </div>
                   <p className="text-primary dark:text-green-400 font-semibold mb-2">{exp.company}</p>
                   <p className="text-muted-foreground dark:text-green-400/60 text-sm mb-3">{exp.period}</p>
-                  <p className="text-muted-foreground dark:text-green-400/80">{exp.description}</p>
+                  {Array.isArray(exp.description) ? (
+                    <ul className="text-muted-foreground dark:text-green-400/80 space-y-2">
+                      {exp.description.map((item, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <span className="mr-2 text-primary dark:text-green-400">▸</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-muted-foreground dark:text-green-400/80">{exp.description}</p>
+                  )}
                 </motion.div>
               </motion.div>
             ))}

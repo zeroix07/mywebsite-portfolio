@@ -64,22 +64,40 @@ export default function Home() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Here you would typically send the form data to a backend service
-    // For now, we'll just simulate it with a timeout
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Show success message
-    alert('Thank you for your message! I will get back to you soon.');
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      body: ''
-    });
-    
-    setIsSubmitting(false);
+    try {
+      const response = await fetch('https://formspree.io/f/xvgvgylr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.body, // Formspree expects 'message' for the main content
+        }),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+      
+      // Show success message
+      alert('Thank you for your message! I will get back to you soon.');
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        body: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Sorry, there was an error sending your message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

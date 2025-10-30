@@ -285,7 +285,7 @@ export default function Home() {
                 I'm a passionate Analytics and AI Engineer with expertise in transforming complex data into actionable insights and intelligent solutions. My work bridges the gap between data science and practical business applications.
               </p>
               <p className="text-lg text-muted-foreground dark:text-green-400/80 leading-relaxed">
-                With a strong foundation in machine learning, statistical analysis, and software engineering, I build scalable AI systems that solve real-world problems and drive measurable business impact.
+                With a strong foundation in machine learning, statistical analysis, data engineering, and software engineering, I build scalable AI systems that solve real-world problems and drive measurable business impact.
               </p>
             </motion.div>
             
@@ -319,8 +319,8 @@ export default function Home() {
             viewport={{ once: true }}
           >
             {[
-              { icon: <BarChart3 className="w-8 h-8" />, title: "Data Analytics", desc: "Deep insights from complex datasets" },
-              { icon: <Database className="w-8 h-8" />, title: "Data Science", desc: "Statistical modeling and analysis" },
+              { icon: <BarChart3 className="w-8 h-8" />, title: "Data Analytics/Science", desc: "Deep insights from complex datasets" },
+              { icon: <Database className="w-8 h-8" />, title: "Data Engineering", desc: "Scalable data pipelines and infrastructure" },
               { icon: <TrendingUp className="w-8 h-8" />, title: "Business Intelligence", desc: "Strategic insights and dashboards" },
               { icon: <Brain className="w-8 h-8" />, title: "Machine Learning", desc: "Building intelligent AI solutions" },
               { icon: <Code className="w-8 h-8" />, title: "Software Engineering", desc: "Scalable, robust systems" },
@@ -526,7 +526,7 @@ export default function Home() {
             {[
               "Git", "SQL", "NoSQL", "REST API", "GraphQL", 
               "CI/CD", "Linux", "Bash", "Tableau", "Power BI", "Spark", "Hadoop", "FastAPI", "Redis", 
-              "Selenium", "Polars", "MLflow", "BigQuery", "Typesense", "Google Cloud Platform"
+              "Selenium", "Polars", "MLflow", "BigQuery", "Typesense", "Google Cloud Platform", "Zabbix"
             ].map((tool, index) => (
               <motion.div
                 key={index}
@@ -569,7 +569,7 @@ export default function Home() {
               {
                 title: "Real-time Data Pipeline",
                 description: "Scalable ETL pipeline processing 1M+ events daily with real-time analytics dashboard",
-                tech: ["Apache Kafka", "Spark", "Docker", "Grafana"],
+                tech: ["Apache Kafka", "Spark", "Docker", "Airflow", "dbt", "Zabbix"],
                 link: "#"
               },
               {
@@ -587,13 +587,13 @@ export default function Home() {
               {
                 title: "Business Intelligence Dashboard",
                 description: "Interactive dashboard providing real-time insights for C-level executives",
-                tech: ["Tableau", "SQL", "Python", "D3.js"],
+                tech: ["Tableau", "SQL", "Python", "PostgreSQL"],
                 link: "#"
               },
               {
                 title: "Recommendation Engine",
                 description: "Collaborative filtering system increasing user engagement by 60%",
-                tech: ["Machine Learning", "Redis", "Node.js", "MongoDB"],
+                tech: ["Machine Learning", "Redis", "Node.js", "PostgreSQL"],
                 link: "#"
               }
             ].map((project, index) => (
@@ -882,7 +882,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
-                <Card className={`h-full ${competition.highlight ? 'bg-card/50 border-border/30 hover:border-primary/50 dark:from-green-900/20 dark:to-black/50 dark:border-green-500/30' : 'bg-card/50 border-border/30 hover:border-primary/50 dark:bg-black/50 dark:border-green-900/30'} dark:hover:border-green-500/50 transition-all duration-300 shadow-lg`}>
+                <Card className="h-full bg-card/50 border-border/30 hover:border-primary/50 dark:from-green-900/20 dark:to-black/50 dark:border-green-500/30 dark:hover:border-green-500/50 transition-all duration-300 shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">

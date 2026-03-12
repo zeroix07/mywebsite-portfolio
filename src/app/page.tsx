@@ -1186,9 +1186,9 @@ export default function Home() {
               viewport={{ once: true }}
             >
               {[
-                { icon: <Github className="w-6 h-6" />, href: "#" },
-                { icon: <Linkedin className="w-6 h-6" />, href: "#" },
-                { icon: <Mail className="w-6 h-6" />, href: "#" }
+                { icon: <Github className="w-6 h-6" />, href: "https://github.com/zeroix07" },
+                { icon: <Linkedin className="w-6 h-6" />, href: "https://www.linkedin.com/in/fadhel-muhammad-apriansyah/" },
+                { icon: <Mail className="w-6 h-6" />, href: "fmapriansyah3@gmail.com" }
               ].map((social, index) => (
                 <motion.a
                   key={index}

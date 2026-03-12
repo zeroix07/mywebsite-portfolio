@@ -282,10 +282,10 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <p className="text-lg text-muted-foreground dark:text-green-400/80 leading-relaxed">
-                I'm a passionate Analytics and AI Engineer with expertise in transforming complex data into actionable insights and intelligent solutions. My work bridges the gap between data science and practical business applications.
+              Fullstack Analytics & AI Engineer with experience in the end-to-end data lifecycle, specializing in the convergence of scalable data infrastructure and advanced AI architectures. Architected robust data transformation layers and streaming pipelines using Apache Airflow, DuckDB, and Parquet, BigQuery, seamlessly integrating them with Generative AI solutions and Retrieval-Augmented Generation (RAG) frameworks.
               </p>
               <p className="text-lg text-muted-foreground dark:text-green-400/80 leading-relaxed">
-                With a strong foundation in machine learning, statistical analysis, data engineering, and software engineering, I build scalable AI systems that solve real-world problems and drive measurable business impact.
+              Expert in developing and deploying production-grade Machine Learning and Deep Learning models to solve complex business challenges, from predictive analytics to intelligent automation. Experienced in managing and maintaining on-premises infrastructure alongside leveraging the Google Cloud ecosystem and Vector Databases to deliver high-impact, AI-driven insights for Retail, Fintech, and Government sectors.
               </p>
             </motion.div>
             
@@ -525,7 +525,7 @@ export default function Home() {
           >
             {[
               "Git", "SQL", "NoSQL", "REST API", "GraphQL", 
-              "CI/CD", "Linux", "Bash", "Tableau", "Power BI", "Spark", "Hadoop", "FastAPI", "Redis", 
+              "CI/CD", "Linux", "Bash", "Tableau", "Power BI", "Metabase", "Spark", "Hadoop", "FastAPI", "Redis", 
               "Selenium", "Polars", "MLflow", "BigQuery", "Typesense", "Google Cloud Platform", "Zabbix"
             ].map((tool, index) => (
               <motion.div
@@ -651,15 +651,30 @@ export default function Home() {
           <div className="space-y-8">
             {[
               {
-                title: "Co-Founder & AI/ML Engineer",
-                company: "Tride Agency",
-                period: "Jan 2025 - Present",
-                type: "Self Employed",
+                title: "Data Analyst",
+                company: "dRetail.id",
+                period: "Oct 2024 – Present",
+                type: "Full Time",
                 description: [
-                  "Researched and evaluated machine learning algorithms and AI architectures to identify optimal models to solve various business problems.",
-                  "Designed, implemented, and deployed machine learning pipelines and AI models for classification, forecasting, and business insight generation.",
-                  "Collaborated with cross-functional teams to integrate AI/ML systems into production environments, ensuring reliability and scalability.",
-                  "Provided consultation and mentorship in AI and Machine Learning for internal teams and external clients, supporting model development, deployment, and strategic data utilization."
+                  "Built, scheduled, and monitored workflows seamlessly using Apache Airflow, ensuring consistent and efficient data operations.",
+                  "Designed and implemented robust ETL processes, optimized data flow and improved data accessibility and handling.",
+                  "Architected complex data pipelines, successfully integrating diverse data sources to deliver high-quality, actionable insights.",
+                  "Analyzed data to uncover trends, patterns, and insights, directly contributing to data-driven decision-making.",
+                  "Processed and managed large-scale Big Data with precision, ensuring high-quality and reliable outputs.",
+                  "Developed and automated daily, weekly, and monthly reporting, streamlining business intelligence processes.",
+                  "Implemented Tableau dashboard visualizations to enhance strategic decision-making and monitor key business metrics."
+                ]
+              },
+              {
+                title: "Google Cloud Arcade Facilitator",
+                company: "Google Cloud",
+                period: "Jul 2025 - Sep 2025",
+                type: "Part Time",
+                description: [
+                  "Demonstrated expertise in GCP services including BigQuery, Vertex AI, looker studio, and Cloud Run to support participants during the Arcade challenge.",
+                  "Managed community-led learning initiatives by leveraging Google Cloud Skills Boost resources to track and boost participant progress.",
+                  "Organized virtual and in-person Cloud Jam sessions to simplify complex cloud concepts like Kubernetes and Infrastructure as Code (IaC).",
+                  "Validated technical solutions and provided architectural guidance while troubleshooting complex issues related to IAM, Networking, and Resource Management within the Google Cloud Console, ensuring seamless lab execution and successful project deployment for advanced-level Arcade missions."
                 ]
               },
               {
@@ -674,21 +689,6 @@ export default function Home() {
                   "Provided expert guidance on capstone projects, to develop industry-standard solutions.",
                   "Evaluated student progress through rigorous assessments, improving problem-solving and analytical skills.",
                   "Applied industry expertise to bridge the gap between academic concepts and real-world data science challenges."
-                ]
-              },
-              {
-                title: "Data Analyst",
-                company: "dRetail.id",
-                period: "Oct 2024 – Present",
-                type: "Full Time",
-                description: [
-                  "Built, scheduled, and monitored workflows seamlessly using Apache Airflow, ensuring consistent and efficient data operations.",
-                  "Designed and implemented robust ETL processes, optimized data flow and improved data accessibility and handling.",
-                  "Architected complex data pipelines, successfully integrating diverse data sources to deliver high-quality, actionable insights.",
-                  "Analyzed data to uncover trends, patterns, and insights, directly contributing to data-driven decision-making.",
-                  "Processed and managed large-scale Big Data with precision, ensuring high-quality and reliable outputs.",
-                  "Developed and automated daily, weekly, and monthly reporting, streamlining business intelligence processes.",
-                  "Implemented Tableau dashboard visualizations to enhance strategic decision-making and monitor key business metrics."
                 ]
               },
               {
@@ -826,51 +826,27 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "Kaggle Grandmaster",
-                organizer: "Kaggle",
-                date: "2023",
-                achievement: "Achieved Grandmaster rank in top 0.1% of data scientists worldwide",
-                category: "Data Science",
+                title: "Sucofindo Science Hackathon Festival (Sci-Hack Fest)",
+                organizer: "PT. Sucofindo",
+                date: "2024",
+                achievement: "The First Winner EV Category & Best of The Best",
+                category: "Hackathon",
                 highlight: true
               },
               {
-                title: "Global AI Challenge Winner",
-                organizer: "MIT AI Lab",
+                title: "INDONERIS NATIONAL IT COMPETITION 2023",
+                organizer: "AMIKOM PURWOKERTO",
                 date: "2022",
-                achievement: "First place in global AI competition for climate change solutions",
-                category: "Machine Learning",
+                achievement: "The Third Place Business Plan Competition",
+                category: "Business Plan Competition",
                 highlight: true
               },
               {
-                title: "HackMIT Finalist",
-                organizer: "MIT",
-                date: "2021",
+                title: "BPJS Healthkathon",
+                organizer: "BPJS Kesehatan",
+                date: "2025",
                 achievement: "Top 10 finalists out of 1000+ teams with AI-powered healthcare solution",
                 category: "Hackathon",
-                highlight: false
-              },
-              {
-                title: "Data Science Bowl Champion",
-                organizer: "DrivenData",
-                date: "2021",
-                achievement: "Won international competition for medical image analysis",
-                category: "Data Science",
-                highlight: true
-              },
-              {
-                title: "NASA Space Apps Challenge",
-                organizer: "NASA",
-                date: "2020",
-                achievement: "Global nominee for satellite data analysis project",
-                category: "Hackathon",
-                highlight: false
-              },
-              {
-                title: "Google Hash Code Finalist",
-                organizer: "Google",
-                date: "2020",
-                achievement: "Reached finals in global programming competition",
-                category: "Competitive Programming",
                 highlight: false
               }
             ].map((competition, index) => (
@@ -934,9 +910,9 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-foreground dark:text-green-300 mb-4">Competition Stats</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {[
-                  { number: "15+", label: "Competitions" },
-                  { number: "3", label: "First Places" },
-                  { number: "5", label: "Top 10 Finishes" }
+                  { number: "5", label: "Competitions" },
+                  { number: "1", label: "First Places" },
+                  { number: "2", label: "Top 10 Finishes" }
                 ].map((stat, index) => (
                   <motion.div
                     key={index}
@@ -973,58 +949,31 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "AWS Certified Machine Learning Specialist",
-                issuer: "Amazon Web Services",
-                date: "2023",
-                credentialId: "AWS-MLS-123456",
-                status: "active",
-                level: "Professional",
-                icon: "☁️"
-              },
-              {
-                title: "Google Cloud Professional Data Engineer",
-                issuer: "Google Cloud",
-                date: "2023",
-                credentialId: "GCP-DE-789012",
-                status: "active",
-                level: "Professional",
-                icon: "🔷"
-              },
-              {
-                title: "Microsoft Certified: Azure AI Engineer Associate",
-                issuer: "Microsoft",
-                date: "2022",
-                credentialId: "AZ-AI-345678",
-                status: "active",
-                level: "Associate",
-                icon: "🔷"
-              },
-              {
                 title: "TensorFlow Developer Certificate",
                 issuer: "Google",
                 date: "2022",
                 credentialId: "TF-DEV-901234",
                 status: "active",
                 level: "Professional",
-                icon: "🧠"
+                icon: ""
               },
               {
-                title: "Certified Analytics Professional (CAP)",
-                issuer: "INFORMS",
-                date: "2022",
-                credentialId: "CAP-567890",
+                title: "Astronomer Certification DAG Authoring for Apache Airflow 3",
+                issuer: "Astronomer",
+                date: "2025",
+                credentialId: "bc81428c-e57c-4d91-8b33-25d5e481419c",
                 status: "active",
                 level: "Professional",
-                icon: "📊"
+                icon: ""
               },
               {
-                title: "Deep Learning Specialization",
-                issuer: "Coursera - deeplearning.ai",
-                date: "2021",
-                credentialId: "DL-SPEC-234567",
+                title: "Astronomer Certification for Apache Airflow 3 Fundamentals",
+                issuer: "Astronomer",
+                date: "2025",
+                credentialId: "1ce5b6bf-fe35-4c06-bb31-130dd54b9792",
                 status: "active",
                 level: "Specialization",
-                icon: "🎓"
+                icon: ""
               }
             ].map((cert, index) => (
               <motion.div

@@ -954,7 +954,7 @@ export default function Home() {
                 date: "2022",
                 credentialId: "TF-DEV-901234",
                 status: "active",
-                level: "Professional",
+                level: "Specialization",
                 icon: ""
               },
               {
@@ -972,7 +972,7 @@ export default function Home() {
                 date: "2025",
                 credentialId: "1ce5b6bf-fe35-4c06-bb31-130dd54b9792",
                 status: "active",
-                level: "Specialization",
+                level: "Professional",
                 icon: ""
               }
             ].map((cert, index) => (

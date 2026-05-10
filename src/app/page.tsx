@@ -322,7 +322,7 @@ export default function Home() {
               { icon: <BarChart3 className="w-8 h-8" />, title: "Data Analytics/Science", desc: "Deep insights from complex datasets" },
               { icon: <Database className="w-8 h-8" />, title: "Data Engineering", desc: "Scalable data pipelines and infrastructure" },
               { icon: <TrendingUp className="w-8 h-8" />, title: "Business Intelligence", desc: "Strategic insights and dashboards" },
-              { icon: <Brain className="w-8 h-8" />, title: "Machine Learning", desc: "Building intelligent AI solutions" },
+              { icon: <Brain className="w-8 h-8" />, title: "Machine Learning/Artificial Intelligence", desc: "Building intelligent AI solutions" },
               { icon: <Code className="w-8 h-8" />, title: "Software Engineering", desc: "Scalable, robust systems" },
               { icon: <Sparkles className="w-8 h-8" />, title: "Innovation", desc: "Cutting-edge technology solutions" }
             ].map((skill, index) => (
@@ -525,8 +525,8 @@ export default function Home() {
           >
             {[
               "Git", "SQL", "NoSQL", "REST API", "GraphQL", 
-              "CI/CD", "Linux", "Bash", "Tableau", "Power BI", "Metabase", "Spark", "Hadoop", "FastAPI", "Redis", 
-              "Selenium", "Polars", "MLflow", "BigQuery", "Typesense", "Google Cloud Platform", "Zabbix"
+              "CI/CD", "Linux", "Bash", "Tableau", "Power BI", "Metabase", "Spark", "Hadoop", "RisingWave", "FastAPI", "Redis", 
+              "Selenium", "Polars", "MLflow", "BigQuery", "DuckDb", "Typesense", "Google Cloud Platform", "Zabbix"
             ].map((tool, index) => (
               <motion.div
                 key={index}
@@ -562,40 +562,58 @@ export default function Home() {
             {[
               {
                 title: "Predictive Analytics Platform",
-                description: "ML-powered forecasting system that reduced prediction errors by 40% for retail clients",
+                description: "Engineered an ML-driven forecasting engine that slashed prediction errors by 40%, empowering retail clients with data-driven inventory and demand strategies.",
                 tech: ["Python", "TensorFlow", "React", "PostgreSQL"],
                 link: "#"
               },
               {
                 title: "Real-time Data Pipeline",
-                description: "Scalable ETL pipeline processing 1M+ events daily with real-time analytics dashboard",
-                tech: ["Apache Kafka", "Spark", "Docker", "Airflow", "dbt", "Zabbix"],
+                description: "Architected a high-throughput ETL pipeline ingesting 1M+ events daily, delivering real-time analytics and actionable business intelligence at scale.",
+                tech: ["Apache Kafka", "Spark", "Docker", "Airflow", "dbt"],
                 link: "#"
               },
               {
                 title: "AI Chatbot System",
-                description: "NLP-powered customer service bot handling 10K+ conversations with 85% satisfaction",
-                tech: ["NLP", "FastAPI", "Redis", "React"],
+                description: "Deployed an AI conversational agent resolving 10K+ customer interactions with 85% satisfaction, reducing support overhead by 60%.",
+                tech: ["Gemini", "Langchain", "FastAPI", "Redis", "React"],
                 link: "#"
               },
               {
                 title: "Anomaly Detection System",
-                description: "Unsupervised learning system detecting fraud patterns with 95% accuracy",
+                description: "Built an unsupervised learning framework detecting sophisticated fraud patterns with 95% precision, safeguarding millions in transaction volume.",
                 tech: ["Python", "Scikit-learn", "AWS", "Docker"],
                 link: "#"
               },
               {
                 title: "Business Intelligence Dashboard",
-                description: "Interactive dashboard providing real-time insights for C-level executives",
+                description: "Designed an executive-grade interactive dashboard surfacing real-time KPIs and strategic insights, accelerating C-suite decision-making by 3x.",
                 tech: ["Tableau", "SQL", "Python", "PostgreSQL"],
                 link: "#"
               },
               {
                 title: "Recommendation Engine",
-                description: "Collaborative filtering system increasing user engagement by 60%",
+                description: "Developed a collaborative filtering system boosting user engagement by 60% and conversion rates through hyper-personalized content delivery.",
                 tech: ["Machine Learning", "Redis", "Node.js", "PostgreSQL"],
                 link: "#"
-              }
+              },
+              {
+                title: "Smart Parking System",
+                description: "Engineered a real-time parking management platform leveraging YOLOv8 for spot detection and AI-powered license plate recognition, optimizing urban parking utilization.",
+                tech: ["YOLOv8", "Redis", "PostgreSQL", "Gemini", "FastAPI", "LangChain"],
+                link: "#"
+              },
+              {
+                title: "BPJS AI Healthcare Claim Fraud Detection",
+                description: "Built an AI-driven document extractor and fraud detection pipeline for healthcare claims, streamlining verification and reducing fraudulent payouts.",
+                tech: ["LangChain", "Gemini", "FastAPI"],
+                link: "#"
+              },
+              {
+                title: "Financial Reconciliation System",
+                description: "Delivered an AI-powered reconciliation engine automating transaction matching, blockchain verification, and fee sharing—cutting manual errors by 30% for financial institutions.",
+                tech: ["Next.js", "TypeScript", "FastAPI"],
+                link: "#"
+              },
             ].map((project, index) => (
               <motion.div
                 key={index}

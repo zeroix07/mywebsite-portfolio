@@ -973,7 +973,8 @@ export default function Home() {
                 credentialId: "TF-DEV-901234",
                 status: "active",
                 level: "Specialization",
-                icon: ""
+                icon: "",
+                link: "https://www.credential.net/9fb9fedc-d8ff-4b31-a8a8-f751e7530512"
               },
               {
                 title: "Astronomer Certification DAG Authoring for Apache Airflow 3",
@@ -982,7 +983,8 @@ export default function Home() {
                 credentialId: "bc81428c-e57c-4d91-8b33-25d5e481419c",
                 status: "active",
                 level: "Professional",
-                icon: ""
+                icon: "",
+                link: "https://www.credly.com/badges/bc81428c-e57c-4d91-8b33-25d5e481419c/linked_in_profile"
               },
               {
                 title: "Astronomer Certification for Apache Airflow 3 Fundamentals",
@@ -991,7 +993,8 @@ export default function Home() {
                 credentialId: "1ce5b6bf-fe35-4c06-bb31-130dd54b9792",
                 status: "active",
                 level: "Professional",
-                icon: ""
+                icon: "",
+                link: "https://www.credly.com/badges/1ce5b6bf-fe35-4c06-bb31-130dd54b9792/linked_in_profile"
               }
             ].map((cert, index) => (
               <motion.div
@@ -1008,10 +1011,10 @@ export default function Home() {
                       <div className="text-3xl mb-3">{cert.icon}</div>
                       <div className="flex items-center gap-2">
                         <span className={`px-2 py-1 text-xs rounded-full font-semibold ${cert.level === 'Professional'
-                            ? 'bg-primary/10 text-primary dark:bg-green-500/20 dark:text-green-300'
-                            : cert.level === 'Associate'
-                              ? 'bg-blue-500/10 text-blue-600'
-                              : 'bg-purple-500/10 text-purple-600'
+                          ? 'bg-primary/10 text-primary dark:bg-green-500/20 dark:text-green-300'
+                          : cert.level === 'Associate'
+                            ? 'bg-blue-500/10 text-blue-600'
+                            : 'bg-purple-500/10 text-purple-600'
                           }`}>
                           {cert.level}
                         </span>
@@ -1050,8 +1053,11 @@ export default function Home() {
                         variant="outline"
                         size="sm"
                         className="w-full border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 dark:border-green-500/30 dark:text-green-400 dark:hover:bg-green-500/10 dark:hover:border-green-500/50 transition-all duration-300"
+                        asChild
                       >
-                        Verify Credential
+                        <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                          Verify Credential
+                        </a>
                       </Button>
                     </motion.div>
                   </CardContent>

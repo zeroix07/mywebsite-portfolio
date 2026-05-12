@@ -12,7 +12,7 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [activeSection, setActiveSection] = useState('home');
   const { scrollYProgress } = useScroll();
-  
+
   // Contact form state
   const [formData, setFormData] = useState({
     name: '',
@@ -21,14 +21,14 @@ export default function Home() {
     body: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const headerY = useTransform(scrollYProgress, [0, 0.2], [0, -50]);
   const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0.8]);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      
+
       const sections = ['home', 'about', 'tools', 'projects', 'experience', 'competitions', 'certifications', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -38,7 +38,7 @@ export default function Home() {
         }
         return false;
       });
-      
+
       if (current) setActiveSection(current);
     };
 
@@ -63,7 +63,7 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch('https://formspree.io/f/xvgvgylr', {
         method: 'POST',
@@ -77,14 +77,14 @@ export default function Home() {
           message: formData.body, // Formspree expects 'message' for the main content
         }),
       });
-      
+
       if (!response.ok) {
         throw new Error('Failed to send message');
       }
-      
+
       // Show success message
       alert('Thank you for your message! I will get back to you soon.');
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -158,14 +158,14 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative px-4">
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5 dark:from-green-900/10 dark:via-black dark:to-black/50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <motion.div 
+          <motion.div
             className="mb-8 flex flex-col items-center"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -184,8 +184,8 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 dark:from-green-400 dark:to-green-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -193,8 +193,8 @@ export default function Home() {
           >
             Analytics & AI Engineer
           </motion.h1>
-          
-          <motion.h2 
+
+          <motion.h2
             className="text-3xl md:text-4xl font-bold mb-6 text-foreground dark:text-green-300"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -202,8 +202,8 @@ export default function Home() {
           >
             Fadhel Muhammad Apriansyah
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             className="text-xl md:text-2xl text-muted-foreground dark:text-green-400/80 mb-8 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -211,20 +211,20 @@ export default function Home() {
           >
             Transforming data into intelligent solutions that drive business growth and innovation
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <Button 
+            <Button
               onClick={() => scrollToSection('projects')}
               className="bg-primary hover:bg-primary/90 dark:bg-green-500 dark:hover:bg-green-600 text-primary-foreground dark:text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               View Projects
             </Button>
-            <Button 
+            <Button
               onClick={() => scrollToSection('contact')}
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground dark:border-green-500 dark:text-green-400 dark:hover:bg-green-500 dark:hover:text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300"
@@ -232,8 +232,8 @@ export default function Home() {
               Get In Touch
             </Button>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="flex justify-center space-x-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -250,8 +250,8 @@ export default function Home() {
             </a>
           </motion.div>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -263,7 +263,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-primary/70 dark:from-green-400 dark:to-green-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -272,9 +272,9 @@ export default function Home() {
           >
             About Me
           </motion.h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div 
+            <motion.div
               className="space-y-6 order-2 md:order-1"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -282,14 +282,14 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <p className="text-lg text-muted-foreground dark:text-green-400/80 leading-relaxed">
-              Fullstack Analytics & AI Engineer with experience in the end-to-end data lifecycle, specializing in the convergence of scalable data infrastructure and advanced AI architectures. Architected robust data transformation layers and streaming pipelines using Apache Airflow, DuckDB, and Parquet, BigQuery, seamlessly integrating them with Generative AI solutions and Retrieval-Augmented Generation (RAG) frameworks.
+                Fullstack Analytics & AI Engineer with experience in the end-to-end data lifecycle, specializing in the convergence of scalable data infrastructure and advanced AI architectures. Architected robust data transformation layers and streaming/periodic pipelines using kafka, Risingwave, Kubernetes, Apache Airflow, DuckDB, Parquet, BigQuery, seamlessly integrating them with Generative AI solutions and Retrieval-Augmented Generation (RAG) frameworks.
               </p>
               <p className="text-lg text-muted-foreground dark:text-green-400/80 leading-relaxed">
-              Expert in developing and deploying production-grade Machine Learning and Deep Learning models to solve complex business challenges, from predictive analytics to intelligent automation. Experienced in managing and maintaining on-premises infrastructure alongside leveraging the Google Cloud ecosystem and Vector Databases to deliver high-impact, AI-driven insights for Retail, Fintech, and Government sectors.
+                Expert in developing and deploying production-grade Machine Learning and Deep Learning models to solve complex business challenges, from predictive analytics to intelligent automation. Experienced in managing and maintaining on-premises infrastructure alongside leveraging the Google Cloud ecosystem and Vector Databases to deliver high-impact, AI-driven insights for Retail, Fintech, and Government sectors.
               </p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="flex justify-center order-1 md:order-2"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -310,8 +310,8 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -344,8 +344,8 @@ export default function Home() {
               </motion.div>
             ))}
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="mt-12 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -365,7 +365,7 @@ export default function Home() {
       {/* Tools Section */}
       <section id="tools" className="py-20 px-4 bg-gradient-to-b from-background via-background to-accent/5 dark:from-black dark:via-black dark:to-green-950/20">
         <div className="max-w-6xl mx-auto">
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-primary/70 dark:from-green-400 dark:to-green-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -374,15 +374,15 @@ export default function Home() {
           >
             Tools & Technologies
           </motion.h2>
-          
+
           {/* Row 1 - Continuous seamless looping animation from right to left */}
           <div className="mb-12 overflow-hidden relative">
-            <motion.div 
+            <motion.div
               className="flex gap-6 w-max"
               animate={{ x: [0, -1456] }} // Exact width of one set of tools (8 cards * 160px + 7 gaps * 24px = 1456px)
-              transition={{ 
-                duration: 20, 
-                repeat: Infinity, 
+              transition={{
+                duration: 20,
+                repeat: Infinity,
                 ease: "linear",
                 repeatType: "loop"
               }}
@@ -444,15 +444,15 @@ export default function Home() {
               ))}
             </motion.div>
           </div>
-          
+
           {/* Row 2 - Continuous seamless looping animation from left to right */}
           <div className="overflow-hidden relative">
-            <motion.div 
+            <motion.div
               className="flex gap-6 w-max"
               animate={{ x: [-1456, 0] }} // Reverse direction for left to right
-              transition={{ 
-                duration: 20, 
-                repeat: Infinity, 
+              transition={{
+                duration: 20,
+                repeat: Infinity,
                 ease: "linear",
                 repeatType: "loop"
               }}
@@ -514,9 +514,9 @@ export default function Home() {
               ))}
             </motion.div>
           </div>
-          
+
           {/* Additional Tools Grid */}
-          <motion.div 
+          <motion.div
             className="mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -524,8 +524,8 @@ export default function Home() {
             viewport={{ once: true }}
           >
             {[
-              "Git", "SQL", "NoSQL", "REST API", "GraphQL", 
-              "CI/CD", "Linux", "Bash", "Tableau", "Power BI", "Metabase", "Spark", "Hadoop", "RisingWave", "FastAPI", "Redis", 
+              "Git", "SQL", "NoSQL", "REST API", "GraphQL",
+              "CI/CD", "Linux", "Bash", "Tableau", "Power BI", "Metabase", "Spark", "Hadoop", "RisingWave", "FastAPI", "Redis",
               "Selenium", "Polars", "MLflow", "BigQuery", "DuckDb", "Typesense", "Google Cloud Platform", "Zabbix"
             ].map((tool, index) => (
               <motion.div
@@ -548,7 +548,7 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 bg-gradient-to-b from-background via-background to-accent/5 dark:from-black dark:via-black dark:to-green-950/20">
         <div className="max-w-6xl mx-auto">
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-primary/70 dark:from-green-400 dark:to-green-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -557,7 +557,7 @@ export default function Home() {
           >
             Featured Projects
           </motion.h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -633,8 +633,8 @@ export default function Home() {
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tech.map((tech, techIndex) => (
-                        <motion.span 
-                          key={techIndex} 
+                        <motion.span
+                          key={techIndex}
                           className="px-2 py-1 bg-primary/10 text-primary dark:bg-green-900/30 dark:text-green-400 text-xs rounded-full border border-primary/20 dark:border-green-800/50"
                           whileHover={{ scale: 1.1 }}
                         >
@@ -656,7 +656,7 @@ export default function Home() {
       {/* Experience Section */}
       <section id="experience" className="py-20 px-4 bg-gradient-to-b from-background via-background to-accent/5 dark:from-black dark:via-black dark:to-green-950/20">
         <div className="max-w-4xl mx-auto">
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-primary/70 dark:from-green-400 dark:to-green-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -665,7 +665,7 @@ export default function Home() {
           >
             Experience
           </motion.h2>
-          
+
           <div className="space-y-8">
             {[
               {
@@ -790,12 +790,12 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <motion.div 
+                <motion.div
                   className="absolute left-0 top-0 w-4 h-4 bg-primary dark:bg-green-500 rounded-full transform -translate-x-1/2"
                   whileHover={{ scale: 1.5 }}
                   transition={{ duration: 0.2 }}
                 />
-                <motion.div 
+                <motion.div
                   className="bg-card/50 border border-border/30 dark:bg-black/50 dark:border-green-900/30 rounded-lg p-6 hover:border-primary/50 dark:hover:border-green-500/50 transition-all duration-300 shadow-lg"
                   whileHover={{ scale: 1.02 }}
                 >
@@ -831,7 +831,7 @@ export default function Home() {
       {/* Competitions Section */}
       <section id="competitions" className="py-20 px-4 bg-gradient-to-b from-background via-background to-accent/5 dark:from-black dark:via-black dark:to-green-950/20">
         <div className="max-w-6xl mx-auto">
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-primary/70 dark:from-green-400 dark:to-green-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -840,7 +840,7 @@ export default function Home() {
           >
             Competitions & Hackathons
           </motion.h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
@@ -896,9 +896,9 @@ export default function Home() {
                       </div>
                     </div>
                     <p className="text-muted-foreground dark:text-green-400/70 leading-relaxed">{competition.achievement}</p>
-                    
+
                     {competition.highlight && (
-                      <motion.div 
+                      <motion.div
                         className="mt-4 pt-4 border-t border-border/30 dark:border-green-900/30"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -916,8 +916,8 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="mt-16 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -954,7 +954,7 @@ export default function Home() {
       {/* Certifications Section */}
       <section id="certifications" className="py-20 px-4 bg-gradient-to-b from-background via-background to-accent/5 dark:from-black dark:via-black dark:to-green-950/20">
         <div className="max-w-6xl mx-auto">
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-primary/70 dark:from-green-400 dark:to-green-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -963,7 +963,7 @@ export default function Home() {
           >
             Professional Certifications
           </motion.h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -1007,48 +1007,47 @@ export default function Home() {
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-3xl mb-3">{cert.icon}</div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 text-xs rounded-full font-semibold ${
-                          cert.level === 'Professional' 
-                            ? 'bg-primary/10 text-primary dark:bg-green-500/20 dark:text-green-300' 
+                        <span className={`px-2 py-1 text-xs rounded-full font-semibold ${cert.level === 'Professional'
+                            ? 'bg-primary/10 text-primary dark:bg-green-500/20 dark:text-green-300'
                             : cert.level === 'Associate'
-                            ? 'bg-blue-500/10 text-blue-600'
-                            : 'bg-purple-500/10 text-purple-600'
-                        }`}>
+                              ? 'bg-blue-500/10 text-blue-600'
+                              : 'bg-purple-500/10 text-purple-600'
+                          }`}>
                           {cert.level}
                         </span>
                         <div className="w-2 h-2 bg-primary dark:bg-green-400 rounded-full animate-pulse"></div>
                       </div>
                     </div>
-                    
+
                     <h3 className="text-lg font-bold text-foreground dark:text-green-300 mb-2 group-hover:text-primary dark:group-hover:text-green-200 transition-colors">
                       {cert.title}
                     </h3>
-                    
+
                     <p className="text-primary dark:text-green-400/80 font-semibold mb-1">{cert.issuer}</p>
                     <p className="text-muted-foreground dark:text-green-400/60 text-sm mb-3">{cert.date}</p>
-                    
+
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-muted-foreground dark:text-green-400/70 text-sm">
                         <span className="font-mono bg-secondary dark:bg-black/30 px-2 py-1 rounded text-xs border border-border/30 dark:border-green-900/30">
                           ID: {cert.credentialId}
                         </span>
                       </div>
-                      
+
                       <div className="flex items-center gap-2 text-muted-foreground dark:text-green-400/70 text-sm">
                         <div className="w-2 h-2 bg-primary dark:bg-green-400 rounded-full"></div>
                         <span>Active</span>
                       </div>
                     </div>
-                    
-                    <motion.div 
+
+                    <motion.div
                       className="mt-4 pt-4 border-t border-border/30 dark:border-green-900/30"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.2 }}
                       viewport={{ once: true }}
                     >
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         size="sm"
                         className="w-full border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 dark:border-green-500/30 dark:text-green-400 dark:hover:bg-green-500/10 dark:hover:border-green-500/50 transition-all duration-300"
                       >
@@ -1066,7 +1065,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-gradient-to-b from-background via-background to-accent/5 dark:from-black dark:via-black dark:to-green-950/20">
         <div className="max-w-2xl mx-auto text-center">
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-primary/70 dark:from-green-400 dark:to-green-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1075,7 +1074,7 @@ export default function Home() {
           >
             Let's Connect
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-lg text-muted-foreground dark:text-green-400/80 mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1084,8 +1083,8 @@ export default function Home() {
           >
             I'm always interested in discussing new opportunities, innovative projects, or collaborations.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             className="bg-card/50 dark:bg-black/50 border border-border/30 dark:border-green-900/30 rounded-lg p-8 shadow-lg"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -1127,7 +1126,7 @@ export default function Home() {
                   />
                 </motion.div>
               </div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1144,7 +1143,7 @@ export default function Home() {
                   className="w-full px-4 py-3 bg-background dark:bg-black/50 border border-border dark:border-green-900/30 rounded-lg text-foreground dark:text-green-300 placeholder-muted-foreground dark:placeholder-white focus:outline-none focus:border-primary dark:focus:border-green-500 focus:ring-2 focus:ring-primary/20 dark:focus:ring-green-500/20 transition-all duration-300"
                 />
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1161,7 +1160,7 @@ export default function Home() {
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 resize-none"
                 />
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1172,7 +1171,7 @@ export default function Home() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <Button 
+                  <Button
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-primary hover:bg-primary/90 dark:bg-green-500 dark:hover:bg-green-600 text-primary-foreground dark:text-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
@@ -1195,8 +1194,8 @@ export default function Home() {
                 </motion.div>
               </motion.div>
             </form>
-            
-            <motion.div 
+
+            <motion.div
               className="flex justify-center space-x-6 pt-6 mt-6 border-t border-border/30 dark:border-green-900/30"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -1228,7 +1227,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
-            <motion.div 
+            <motion.div
               className="space-y-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1245,7 +1244,7 @@ export default function Home() {
             </motion.div>
 
             {/* Quick Links */}
-            <motion.div 
+            <motion.div
               className="space-y-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1268,7 +1267,7 @@ export default function Home() {
             </motion.div>
 
             {/* Expertise */}
-            <motion.div 
+            <motion.div
               className="space-y-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1286,7 +1285,7 @@ export default function Home() {
             </motion.div>
 
             {/* Connect */}
-            <motion.div 
+            <motion.div
               className="space-y-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1318,7 +1317,7 @@ export default function Home() {
           </div>
 
           {/* Bottom Bar */}
-          <motion.div 
+          <motion.div
             className="border-t border-border dark:border-green-900/30 pt-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

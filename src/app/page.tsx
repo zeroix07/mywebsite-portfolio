@@ -174,7 +174,7 @@ export default function Home() {
             <div className="relative mb-6">
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary dark:border-green-500 shadow-2xl shadow-primary/20 dark:shadow-green-500/20">
                 <img
-                  src="/profile.svg"
+                  src="/profile.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -299,7 +299,7 @@ export default function Home() {
               <div className="relative">
                 <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary dark:border-green-500 shadow-2xl shadow-primary/20 dark:shadow-green-500/20">
                   <img
-                    src="/profile.svg"
+                    src="/profile.jpg"
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />

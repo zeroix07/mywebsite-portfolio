@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   keywords: ["Analytics", "AI", "Engineer", "Data Science", "Machine Learning", "Data Analysis", "Data Visualization", "Data Engineering", "Data Architecture", "Data Management", "Data Security", "Data Privacy", "Data Governance", "Data Compliance", "Data Quality", "Data Integrity", "Data Accuracy", "Data Reliability"],
   authors: [{ name: "Fadhel Muhammad Apriansyah" }],
   icons: {
-    icon: "/profile.svg",
+    icon: "/profile.jpg",
   },
   openGraph: {
     title: "Fadhel Muhammad Apriansyah Portfolio",

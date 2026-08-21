@@ -670,7 +670,7 @@ export default function Home() {
             {[
               {
                 title: "Data Analyst",
-                company: "dRetail.id",
+                company: "PT. Micro Pay Nusantara",
                 period: "Oct 2024 – Present",
                 type: "Full Time",
                 description: [
